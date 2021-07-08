@@ -107,7 +107,6 @@ class BMP280:
 
     def initialize(self):
         self.reset()
-        time.sleep(0.1)
         self.id = self.read(REG_ID)[0]
         if self.id != ID_BMP280:
             raise Exception("device is not a BMP280. got id %.2x, expected %.2x" % (self.id, ID_BMP280))
@@ -117,6 +116,12 @@ class BMP280:
 
         self.write_config()
         self.write_ctrl()
+
+        # give the sensor some time to stabilize before first measurement
+        # no mention of this being required in the datasheet (that i could find)
+        # empirically determined that first samples are garbage unless this
+        # delay is applied
+        time.sleep(0.1)
 
         return True
 
