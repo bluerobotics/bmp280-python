@@ -1,0 +1,57 @@
+{
+  "0": {
+    "llType": "error",
+    "columns": [
+      {
+        "llabel": "error message",
+        "dtype": "str"
+      }
+    ]
+  },
+  "1": {
+    "llType": "data",
+    "columns": [
+      {
+        "llabel": "pressure",
+        "units": "hPa",
+        "dtype": "float"
+      },
+      {
+        "llabel": "temperature",
+        "units": "degC",
+        "dtype": "float"
+      },
+      {
+        "llabel": "pressure_raw",
+        "dtype": "float"
+      },
+      {
+        "llabel": "temperature_raw",
+        "dtype": "float"
+      }
+    ]
+  },
+  "2": {
+    "llType": "configuration",
+    "columns": [
+      {
+        "llabel": "CTRL",
+        "detail": "CTRL Register Byte",
+        "dtype": "int"
+      },
+      {
+        "llabel": "CFG",
+        "detail": "CFG Register Byte",
+        "dtype": "int"
+      },
+      {
+        "llabel": "comp1",
+        "dtype": "int"
+      },
+      {
+        "llabel": "comp2",
+        "dtype": "int"
+      }
+    ]
+  }
+}
