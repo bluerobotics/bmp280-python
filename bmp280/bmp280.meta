@@ -32,8 +32,28 @@
     ]
   },
   "2": {
-    "llType": "configuration",
+    "llType": "config",
     "columns": [
+      {
+        "llabel": "osrs_t",
+        "dtype": "int"
+      },
+      {
+        "llabel": "osrs_p",
+        "dtype": "int"
+      },
+      {
+        "llabel": "mode",
+        "dtype": "int"
+      },
+      {
+        "llabel": "t_sb",
+        "dtype": "int"
+      },
+      {
+        "llabel": "filter",
+        "dtype": "int"
+      },
       {
         "llabel": "CTRL",
         "detail": "CTRL Register Byte",
@@ -43,13 +63,58 @@
         "llabel": "CFG",
         "detail": "CFG Register Byte",
         "dtype": "int"
-      },
+      }
+    ]
+  },
+  "5": {
+    "llType": "rom",
+    "columns": [
       {
-        "llabel": "comp1",
+        "llabel": "T1",
         "dtype": "int"
       },
       {
-        "llabel": "comp2",
+        "llabel": "T2",
+        "dtype": "int"
+      },
+      {
+        "llabel": "T3",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P1",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P2",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P3",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P4",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P5",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P6",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P7",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P8",
+        "dtype": "int"
+      },
+      {
+        "llabel": "P9",
         "dtype": "int"
       }
     ]
