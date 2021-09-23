@@ -14,7 +14,7 @@ def generate_figures(log):
     plt.subplot(spec[1,:])
     log.data.pressure.pplot(log.data.temperature)
 
-if __name__ == '__main__':
+def main():
     import argparse
     from llog import LLogReader
     from matplotlib.backends.backend_pdf import PdfPages
@@ -42,3 +42,6 @@ if __name__ == '__main__':
     if args.show:
         print('hello?')
         plt.show()
+
+if __name__ == '__main__':
+    main()

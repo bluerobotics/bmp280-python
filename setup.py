@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='bmp280',
@@ -9,5 +9,12 @@ setup(
     author='Blue Robotics',
     url='https://github.com/bluerobotics/bmp280-python',
     packages=['bmp280'],
+    entry_points={
+        'console_scripts': [
+            'bmp280-test=bmp280.test:main',
+            'bmp280-report=bmp280.report:main'
+        ],
+    },
+    package_data={ "bmp280": ["bmp280.meta"]},
     install_requires=['smbus2'],
 )
