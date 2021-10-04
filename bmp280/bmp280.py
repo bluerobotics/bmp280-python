@@ -56,8 +56,8 @@ class Data:
             raise Exception("expected %d bytes, got %d" % (REG_DATA_LENGTH % len(data)))
         self.data = data
         self.compensation = compensation
-        self.pressure_raw = int.from_bytes(data[:3], "big") / 16
-        self.temperature_raw = int.from_bytes(data[3:], "big") / 16
+        self.pressure_raw = int.from_bytes(data[:3], "big") >> 4 # aka / 16
+        self.temperature_raw = int.from_bytes(data[3:], "big") >> 4 # aka / 16
         self.temperature = Data.calculate_temperature(self.temperature_raw, self.compensation)
         self.pressure = Data.calculate_pressure(self.pressure_raw, self.temperature, self.compensation)
 
