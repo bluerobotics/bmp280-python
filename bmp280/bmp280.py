@@ -95,7 +95,7 @@ class Data:
         return pressure
 
 class BMP280:
-    def __init__(self, bus=4, osrs_t=0b010, osrs_p=0b101, mode=0b11, filter=0b100):
+    def __init__(self, bus=1, osrs_t=0b010, osrs_p=0b101, mode=0b11, filter=0b100):
         self._bus = smbus2.SMBus(bus)
 
         self.osrs_t = osrs_t
