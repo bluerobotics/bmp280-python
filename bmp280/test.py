@@ -16,5 +16,5 @@ with LLogWriter(args.meta, args.output, console=args.console) as log:
     
     def data_getter():
         data = bmp.get_data()
-        return f'{data.pressure} {data.temperature} {data.pressure_raw} {data.temperature_raw}'
+        return f'{data.pressure:.6f} {data.temperature:.6f} {data.pressure_raw} {data.temperature_raw}'
     log.log_data_loop(data_getter, parser_args=args)
