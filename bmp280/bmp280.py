@@ -107,6 +107,10 @@ class BMP280:
 
     def initialize(self):
         self.reset()
+
+        # give it some time to reset, otherwise compensation readout is garbage
+        time.sleep(0.010)
+
         self.id = self.read(REG_ID)[0]
         if self.id != ID_BMP280:
             raise Exception("device is not a BMP280. got id %.2x, expected %.2x" % (self.id, ID_BMP280))
