@@ -23,11 +23,11 @@
       },
       {
         "llabel": "pressure_raw",
-        "dtype": "float"
+        "dtype": "int"
       },
       {
         "llabel": "temperature_raw",
-        "dtype": "float"
+        "dtype": "int"
       }
     ]
   },
