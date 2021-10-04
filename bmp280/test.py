@@ -7,7 +7,7 @@ device = "bmp280"
 parser = LLogWriter.create_default_parser(__file__, device)
 args = parser.parse_args()
 
-with LLogWriter(args.meta, args.output) as log:
+with LLogWriter(args.meta, args.output, console=args.console) as log:
     bmp = BMP280()
     compensation = bmp.get_compensation()
     log.log_rom(' '.join(str(d) for d in compensation.data))
